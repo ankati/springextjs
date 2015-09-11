@@ -14,13 +14,14 @@ import com.extjspoc.service.LoginService;
 
 @Controller
 public class LoginController {
-	
+
 	@Autowired
 	private LoginService loginService;
-	
+
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-    public @ResponseBody ResponseEntity<Boolean> login(String some) throws IOException {
-		return new ResponseEntity<Boolean>(loginService.validateCredentials(), HttpStatus.OK);
-    }
-	
+	public @ResponseBody
+	ResponseEntity<Boolean> login(String some) throws IOException {
+		return new ResponseEntity<Boolean>(loginService.validateCredentials(),
+				HttpStatus.OK);
+	}
 }
