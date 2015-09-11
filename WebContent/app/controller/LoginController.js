@@ -23,7 +23,7 @@ Ext.define('ExtJSWebSpring.controller.LoginController', {
 
 		if (formPanel.getForm().isValid()) {
 			Ext.Ajax.request({
-				url : 'resources/login',
+				url : 'resources/login1',
 				params : {
 					user : username,
 					password : password
